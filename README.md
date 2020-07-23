@@ -1,0 +1,2 @@
+# WPFLazyLoader
+一个简单的利用Dispacher优先级（DispatcherPriority）实现的懒加载控件，主要用于在界面完全加载之后再加载部分控件的需求
