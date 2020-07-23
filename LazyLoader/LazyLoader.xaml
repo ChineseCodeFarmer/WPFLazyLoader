@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="LazyLoaderLib.LazyLoader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LazyLoaderLib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Ellipse Name="progress" Width="30" Height="30" StrokeThickness="5" RenderTransformOrigin="0.5,0.5" Opacity="0.7" >
+            <Ellipse.RenderTransform>
+                <RotateTransform ></RotateTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Stroke>
+                <LinearGradientBrush >
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="Black" Offset="1"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Ellipse.Stroke>
+
+        </Ellipse>
+        <TextBlock Text="Loading..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="LightGray" Margin="0,60,0,0"/>
+        <ContentPresenter Name="container" >
+
+        </ContentPresenter>
+    </Grid>
+</UserControl>
